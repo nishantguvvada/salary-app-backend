@@ -16,7 +16,7 @@ mongoose.connect(process.env.MONGO_URL);
 const app = express();
 
 app.use(cors());
-app.use(express.json());
+app.use(bodyParser.json());
 
 // Signup
 app.post("/signup", signupValidation, async (req, res) => {
