@@ -3,11 +3,11 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 const zod = require("zod");
-const { Salary, User } = require("../dB/model");
-const { percentile } = require("../percentile/logic");
-const { signupValidation } = require("../middleware/signupValidation");
-const { authValidation } = require("../middleware/authValidation");
-const { detailsValidation } = require("../middleware/detailsValidation");
+const { Salary, User } = require("./dB/model");
+const { percentile } = require("./percentile/logic");
+const { signupValidation } = require("./middleware/signupValidation");
+const { authValidation } = require("./middleware/authValidation");
+const { detailsValidation } = require("./middleware/detailsValidation");
 require('dotenv').config(); 
 const JWT_SECRET = process.env.JWT_SECRET;
 
